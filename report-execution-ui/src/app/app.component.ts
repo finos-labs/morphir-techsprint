@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Report Execution';
+
+  upload(event: Event) {
+    console.log(event);
+  }
 }

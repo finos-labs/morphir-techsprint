@@ -1,4 +1,4 @@
-<p>
+<div>
   <mat-toolbar color="primary">
     <span class="logo"
       ><img
@@ -7,4 +7,23 @@
     ><span class="title">{{ title }}</span>
     <span></span>
   </mat-toolbar>
-</p>
+
+  <section class="upload">
+    <span class="text">Upload CDM JSON:</span>
+    <span (click)="uploadFile.click()" class="button">
+      <button mat-raised-button color="primary">Choose File</button>
+      <input
+        #uploadFile
+        (change)="upload($event)"
+        type="file"
+        style="display: none"
+      />
+    </span>
+  </section>
+
+  <mat-divider></mat-divider>
+
+  <section>
+    <div>GRID</div>
+  </section>
+</div>

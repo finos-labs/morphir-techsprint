@@ -1,6 +1,5 @@
 :host {
   .logo {
-    display: inline-block;
     height: 50%;
     overflow: hidden;
 
@@ -13,5 +12,13 @@
   .mat-toolbar {
     display: flex;
     justify-content: space-between;
+  }
+
+  .upload {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .text {
+      margin-right: 20px;
+    }
   }
 }
