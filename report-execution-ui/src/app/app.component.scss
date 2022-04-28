@@ -9,16 +9,25 @@
     }
   }
 
+  section {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
   .mat-toolbar {
     display: flex;
     justify-content: space-between;
   }
 
   .upload {
-    margin-top: 50px;
-    margin-bottom: 50px;
     .text {
       margin-right: 20px;
     }
+  }
+
+  table {
+    width: 100%;
   }
 }
