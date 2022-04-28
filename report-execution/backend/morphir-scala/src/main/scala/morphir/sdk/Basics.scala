@@ -15,6 +15,7 @@ limitations under the License.
  */
 
 package morphir.sdk
+
 import morphir.sdk.{ Bool => BoolModule }
 
 object Basics {
