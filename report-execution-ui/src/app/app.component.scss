@@ -1,3 +1,17 @@
-h1 {
-  font-size: large;
+:host {
+  .logo {
+    display: inline-block;
+    height: 50%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      margin-left: 0;
+    }
+  }
+
+  .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
 }
