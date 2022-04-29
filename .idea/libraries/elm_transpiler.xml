@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="elm-transpiler">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/rosetta-elm-gen/elm-transpiler.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
