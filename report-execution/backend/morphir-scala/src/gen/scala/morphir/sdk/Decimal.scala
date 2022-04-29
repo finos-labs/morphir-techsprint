@@ -1,5 +1,4 @@
 package morphir.sdk
-
 import java.math.{ BigDecimal => BigDec }
 
 import morphir.sdk.Basics.Order
