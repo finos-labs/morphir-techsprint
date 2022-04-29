@@ -14,7 +14,7 @@ import Finos.Labs.Morphir.Techsprint.Enum exposing (EventTimestampQualificationE
 
 
 type alias CFTCPart45TransactionReport =
-    {   tradeDate : LocalDate 
+    {   tradeDate : Date 
     ,   eventTimestamp : Maybe ZonedDateTime 
     }
   -- A class to represent the various set of timestamps that can be associated with lifecycle events, as a collection of [dateTime, qualifier].
@@ -29,7 +29,7 @@ type alias ReportableEvent =
     }
   -- Defines the output of a financial transaction between parties - a Business Event. A Trade impacts the financial position (i.e. the balance sheet) of involved parties.
 type alias Trade =
-    {   tradeDate : LocalDate -- Specifies the date which the trade was agreed.
+    {   tradeDate : Date -- Specifies the date which the trade was agreed.
     }
   -- Defines the fundamental financial information that can be changed by a Primitive Event and by extension any business or life-cycle event. Each TradeState specifies where a Trade is in its life-cycle. TradeState is a root type and as such, can be created independently to any other CDM data type, but can also be used as part of the CDM Event Model.
 type alias TradeState =

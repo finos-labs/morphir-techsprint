@@ -1,5 +1,4 @@
 module Com.Rosetta.Model.Type exposing (..)
-import Morphir.SDK.LocalDate exposing (LocalDate)
 import Morphir.SDK.LocalTime exposing (LocalTime)
 
 type alias Date =
@@ -9,7 +8,7 @@ type alias Date =
     }
 
 type alias ZonedDateTime =
-    { date : LocalDate
+    { date : Date
     , time : LocalTime
     , timezone : String
     }

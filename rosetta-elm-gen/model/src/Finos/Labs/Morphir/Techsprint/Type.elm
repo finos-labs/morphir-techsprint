@@ -44,7 +44,7 @@ type alias BusinessEvent =
     ,   after : List TradeState -- Specifies the after trade state(s) created.
     }
 type alias CFTCPart45TransactionReport =
-    {   tradeDate : LocalDate 
+    {   tradeDate : Date 
     ,   eventTimestamp : ZonedDateTime 
     ,   cleared : String 
     ,   centralCounterparty : Maybe String 
@@ -101,8 +101,8 @@ type alias CFTCPart45TransactionReport =
     ,   fixedRateDayCountConventionLeg2 : Maybe String 
     ,   floatingRateDayCountConventionLeg1 : Maybe String 
     ,   floatingRateDayCountConventionLeg2 : Maybe String 
-    ,   fixingDateLeg1 : Maybe LocalDate 
-    ,   fixingDateLeg2 : Maybe LocalDate 
+    ,   fixingDateLeg1 : Maybe Date 
+    ,   fixingDateLeg2 : Maybe Date 
     ,   floatingRateResetFrequencyPeriodLeg1 : Maybe String 
     ,   floatingRateResetFrequencyPeriodLeg2 : Maybe String 
     ,   floatingRateResetFrequencyPeriodMultiplierLeg1 : Maybe Int 
@@ -135,14 +135,14 @@ type alias CFTCPart45TransactionReport =
     ,   strikePriceNotation : Maybe String 
     ,   optionPremiumAmount : Maybe Float 
     ,   optionPremiumCurrency : Maybe String 
-    ,   optionPremiumPaymentDate : Maybe LocalDate 
-    ,   firstExerciseDate : Maybe LocalDate 
+    ,   optionPremiumPaymentDate : Maybe Date 
+    ,   firstExerciseDate : Maybe Date 
     ,   cDSIndexAttachmentPoint : Maybe Float 
     ,   cDSIndexDetachmentPoint : Maybe Float 
     ,   indexFactor : Maybe Float 
     ,   embeddedOptionType : Maybe String 
     ,   uniqueProductIdentifier : Maybe String 
-    ,   finalContractualSettlementDate : LocalDate 
+    ,   finalContractualSettlementDate : Date 
     ,   settlementCurrencyLeg1 : Maybe String 
     ,   settlementCurrencyLeg2 : Maybe String 
     ,   settlementLocationLeg1 : Maybe String 
@@ -150,8 +150,8 @@ type alias CFTCPart45TransactionReport =
     ,   allocationIndicator : String 
     ,   nonStandardizedTermIndicator : Maybe String 
     ,   blockTradeElectionIndicator : Bool 
-    ,   effectiveDate : LocalDate 
-    ,   expirationDate : LocalDate 
+    ,   effectiveDate : Date 
+    ,   expirationDate : Date 
     ,   executionTimestamp : ZonedDateTime 
     ,   reportingTimestamp : ZonedDateTime 
     ,   platformIdentifier : Maybe String 
@@ -231,7 +231,7 @@ type alias NaturalPerson =
     ,   initial : List String -- The natural person's middle initial(s). If a middle initial is provided then a name should be absent.
     ,   surname : Maybe String -- The natural person's surname.
     ,   suffix : Maybe String -- Name suffix, such as Jr., III, etc.
-    ,   dateOfBirth : Maybe LocalDate -- The natural person's date of birth.
+    ,   dateOfBirth : Maybe Date -- The natural person's date of birth.
     }
   -- A class to specify the role(s) that natural person(s) may have in relation to the contract.
 type alias NaturalPersonRole =
@@ -304,7 +304,7 @@ type alias SECPartyInformation =
   -- Defines the output of a financial transaction between parties - a Business Event. A Trade impacts the financial position (i.e. the balance sheet) of involved parties.
 type alias Trade =
     {   tradeIdentifier : List Identifier -- Represents the identifier(s) that uniquely identify a trade for an identity issuer. A trade can include multiple identifiers, for example a trade that is reportable to both the CFTC and ESMA, and then has an associated USI (Unique Swap Identifier) UTI (Unique Trade Identifier).
-    ,   tradeDate : LocalDate -- Specifies the date which the trade was agreed.
+    ,   tradeDate : Date -- Specifies the date which the trade was agreed.
     ,   party : List Party -- Represents the parties to the trade. The cardinality is optional to address the case where the trade is defined within a BusinessEvent data type, in which case the party is specified in BusinessEvent.
     ,   partyRole : List PartyRole -- Represents the role each specified party takes in the trade. further to the principal roles, payer and receiver.
     ,   contractDetails : Maybe ContractDetails -- Represents information specific to trades involving contractual products.
